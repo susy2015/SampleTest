@@ -36,7 +36,7 @@ int main(int argc, char* argv[]) {
     {
       std::cerr <<"Please give 5 arguments "<<"SubsampleName"<<" Input Template" <<" MaxEvent"<<" Startfile"<<" No. of Files to run"<<std::endl;
       std::cerr <<" Valid configurations are " << std::endl;
-      std::cerr <<" ./Closure TTbarInc 1000 0 1" << std::endl;
+      std::cerr <<" ./MC TTbarInc 1000 0 1" << std::endl;
       return -1;
     }
   const char *subsamplename = argv[1];

@@ -36,7 +36,7 @@ int main(int argc, char* argv[]) {
     {
       std::cerr <<"Please give 5 arguments "<<"SubsampleName"<<" Input Template" <<" MaxEvent"<<" Startfile"<<" No. of Files to run"<<std::endl;
       std::cerr <<" Valid configurations are " << std::endl;
-      std::cerr <<" ./Closure TTbarInc 1000 0 1" << std::endl;
+      std::cerr <<" ./LLMC TTbarInc 1000 0 1" << std::endl;
       return -1;
     }
   const char *subsamplename = argv[1];
@@ -154,10 +154,10 @@ int main(int argc, char* argv[]) {
     }
     const double Mht_tru = Mht_truLVec.Pt();
     
-    bool passBaselineClosure = passMuonVeto_tru && passEleVeto_tru && passIsoTrkVeto_tru && passnJets_tru && passdPhis_tru && passMET_tru && passBJets_tru && passTagger_tru && passHT_tru && passMT2_tru;
+    bool passBaselineFull = passMuonVeto_tru && passEleVeto_tru && passIsoTrkVeto_tru && passnJets_tru && passdPhis_tru && passMET_tru && passBJets_tru && passTagger_tru && passHT_tru && passMT2_tru;
     
     //Exp Dist.
-    if(passBaselineClosure && passNoiseEventFilter){
+    if(passBaselineFull && passNoiseEventFilter){
       int jSR = SB.find_Binning_Index(nbJets_tru, nTops_tru, MT2_tru, met);
       if( jSR!= -1 ) {
 	myBaseHistgram.hYields->Fill(jSR, Lumiscale);

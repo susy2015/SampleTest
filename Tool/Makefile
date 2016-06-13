@@ -21,7 +21,7 @@ LHAPDFLIB = -L$(LHAPDF_DATA_PATH)/../../lib -lLHAPDF
 
 PROGRAMS = MC Data CS HadTauMC LLMC PrintSearchBins
 
-all: sampPyWrap $(PROGRAMS)
+all: mkobj sampPyWrap $(PROGRAMS)
 
 mkobj:	
 	@mkdir -p obj

@@ -15,7 +15,7 @@
 #include "SusyAnaTools/Tools/NTupleReader.h"
 #include "SusyAnaTools/Tools/samples.h"
 
-static const int nSB = 37; //We use nSB serach bins depending on Nbjet, Ntop, met and MT2 value.
+static const int nSB = 69; //We use nSB serach bins depending on Nbjet, Ntop, met and MT2 value.
 
 using namespace std;
 
